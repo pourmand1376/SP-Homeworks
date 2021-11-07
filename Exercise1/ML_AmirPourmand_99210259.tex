@@ -1,0 +1,78 @@
+\documentclass{article}[12pt]
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{xepersian}
+\settextfont[Scale=1]{IRXLotus}
+\setlatintextfont[Scale=0.8]{}
+
+\DeclareRobustCommand{\bbone}{\text{\usefont{U}{bbold}{m}{n}1}}
+
+\DeclareMathOperator{\EX}{\mathbb{E}}% expected value
+\let\P\relax
+\DeclareMathOperator{\P}{\mathbb{P}}
+
+\title{  \includegraphics[scale=0.35]{../logo.png} \\
+    دانشکده مهندسی کامپیوتر
+    \\
+    دانشگاه صنعتی شریف
+}
+\author{استاد درس: دکتر حمیدرضا ربیعی}
+\date{پاییز ۱۴۰۱}
+
+
+
+\def \Subject {
+تمرین اول
+}
+\def \Course {
+درس یادگیری ماشین آماری
+}
+\def \Author {
+نام و نام خانوادگی:
+امیر پورمند}
+\def \Email {\lr{pourmand1376@gmail.com}}
+\def \StudentNumber {99210259}
+
+
+\begin{document}
+
+ \maketitle
+ 
+\begin{center}
+\vspace{.4cm}
+{\bf {\huge \Subject}}\\
+{\bf \Large \Course}
+\vspace{.8cm}
+
+{\bf \Author}
+
+\vspace{0.3cm}
+
+{\bf شماره دانشجویی: \StudentNumber}
+
+\vspace{0.3cm}
+
+آدرس ایمیل
+:
+{\bf \Email}
+\end{center}
+
+
+\clearpage
+\section{سوال ۱}
+
+زمان ارسال ایمیل برای علی تابع متغیر تصادفی 
+$X$
+خواهد بود که از توزیع پواسون با پارامتر لاندا پیروی میکند. 
+
+\begin{equation}\begin{split}
+	X \sim Pois(\lambda_A) \\
+	P(X == 3 ) = \frac{\lambda^k e^{-\lambda}}{k!} = 
+	\frac{\lambda_A^3 e^{-\lambda_A}}{3!}	 
+	\end{split}
+\end{equation}
+
+	
+
+ \end{document}
