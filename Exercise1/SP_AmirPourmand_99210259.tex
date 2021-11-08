@@ -26,7 +26,7 @@
 تمرین اول
 }
 \def \Course {
-درس یادگیری ماشین آماری
+درس فرآیند تصادفی
 }
 \def \Author {
 نام و نام خانوادگی:
@@ -61,6 +61,7 @@
 
 \clearpage
 \section{سوال ۱}
+\subsection{الف}
 
 زمان ارسال ایمیل برای علی تابع متغیر تصادفی 
 $X$
@@ -68,11 +69,21 @@ $X$
 
 \begin{equation}\begin{split}
 	X \sim Pois(\lambda_A) \\
-	P(X == 3 ) = \frac{\lambda^k e^{-\lambda}}{k!} = 
+	P(X == 3) = \frac{\lambda^k e^{-\lambda}}{k!} = 
 	\frac{\lambda_A^3 e^{-\lambda_A}}{3!}	 
 	\end{split}
 \end{equation}
 
-	
+\subsection{ب}
+\subsubsection{الف}
+میدانیم هر دو متغیر تصادفی دارای توزیع نمایی هستند که این توزیع عملا بدون حافظه است. یعنی رویداد دوم مستقل از زمان رویداد اول است. پس داریم:
+
+\begin{equation}
+	E \left[
+	Y_2 | Y_1 
+	 \right] = E [Y_2] = \frac{1}{\lambda_A}
+\end{equation}
+\subsubsection{ب}
+\subsubsection{ج}	
 
  \end{document}
