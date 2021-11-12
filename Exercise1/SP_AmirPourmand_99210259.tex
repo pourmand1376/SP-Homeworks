@@ -235,13 +235,13 @@ $N \sim N(\lambda,\lambda)$
 
 \begin{eqnarray*}
 	\begin{gathered}
-			\Lambda \sim Exp( 2)\\
-			N|\Lambda \sim Pois( \lambda )\\
-			P( N=n) =\int _{0}^{\infty } P( N=n|\Lambda =\lambda ) P( \Lambda =\lambda ) d\lambda \\
-			=\int _{0}^{\infty }\frac{e^{-\lambda } \lambda ^{n}}{n!} \times 2e^{-2\lambda } d\lambda \\
-			we\ know\ that\ \int _{0}^{\infty }\frac{e^{-x} x^{n}}{n!} dx=1\\
-			=\frac{2}{3^{n}}\int _{0}^{\infty }\frac{e^{-3\lambda } 3^{n} \lambda ^{n}}{n!} d\lambda =\frac{2}{3^{n}}\\
-			E\left[ N^{2}\right] =\int _{0}^{\infty } n^{2}\frac{2}{3^{n}} dn=\frac{4}{ln^{3}( 3)} 
+				\Lambda \sim Exp( 2)\\
+				N|\Lambda \sim Pois( \lambda )\\
+				P( N=n) =\int _{0}^{\infty } P( N=n|\Lambda =\lambda ) P( \Lambda =\lambda ) d\lambda \\
+				=\int _{0}^{\infty }\frac{e^{-\lambda } \lambda ^{n}}{n!} \times 2e^{-2\lambda } d\lambda \\
+				we\ know\ that\ \int _{0}^{\infty }\frac{e^{-x} x^{n}}{n!} dx=1\\
+				=\frac{2}{3*3^{n}}\int _{0}^{\infty }\frac{e^{-3\lambda } 3^{n} \lambda ^{n}}{n!} d\lambda =\frac{2}{3^{n+1}}\\
+				E\left[ N^{2}\right] =\int _{0}^{\infty } n^{2}\frac{2}{3^{n+1}} dn=\frac{4}{3ln^{3}( 3)}
 	\end{gathered}
 \end{eqnarray*}
 
@@ -338,5 +338,159 @@ $N \sim N(\lambda,\lambda)$
 		\end{cases}
 	\end{gathered}
 \end{equation}
+
+\section{سوال ۴}
+\begin{equation}
+	\begin{gathered}
+			y( t) =x( t-2) +x( 2-t)\\
+			h( t) =\delta ( t-2) +\delta ( 2-t)\\
+			stable:\ \int _{-\infty }^{+\infty } \delta ( t-2) +\delta ( 2-t) dt=2\\
+			casual:\ t< 0,h( t) =0\\
+			not\ memoryless:\ h( 2) =2\neq 0\\
+			Linear:\ \\
+			y( t) =x_{1}( t-2) +x_{1}( 2-t) +x_{1}( t-2) +x_{1}( 2-t)\\
+			y_{1}( t) =x_{1}( t-2) +x_{1}( 2-t)\\
+			y_{2}( t) =x_{1}( t-2) +x_{1}( 2-t)\\
+			\\
+			y( t) =ax( t-2) +ax( 2-t) =ax( t-2) +x( 2-t) =ay_{a}( t)\\
+			we\ could\ also\ easily\ say\ that\ sum\ of\ two\ linear\ systems\ is\ linear!\\
+			\\
+			Time\ invariant:\ y( t-k) =x( t-k-2) +x( 2-t+k)\\
+			S[ x( t-k)] =x( t-k-2) +x( 2-t+k) \ \rightarrow both\ equal
+	\end{gathered}
+\end{equation}\hrule
+\begin{equation}
+	\begin{gathered}
+			y( t) =cos( 3t) x( t)\\
+			h( t) =cost( 3t) \delta ( t)\\
+			stable:\ \int cos( 3t) \delta ( t) dt=1\\
+			memoryless:\ h( t) =0\ execpt\ t=0\\
+			casual:h( t) =0,t< 0\\
+			linear:\ cos( 3t) \ is\ constant( not\ dependant\ on\ x( t)) \ everytime\ and\ product\ of\ constant\ signal\ \\
+			to\ a\ linear\ signal\ is\ definitely\ linear.\ \\
+			\\
+			Time\ variant:\ \\
+			y( t-k) =cos( 3t-3k) x( t-k) \neq cos( 3t) x( t-k)
+	\end{gathered}
+\end{equation}
+\hrule
+\begin{equation}
+	\begin{gathered}
+			y( t) =\int _{-\infty }^{2t} x( t) dt\\
+			h( t) \ =\ u( t)\\
+			not\ stable:\ \int u( t) =\infty \\
+			causal:\ t< 0\rightarrow h( t) =0\\
+			not\ memoryless:\ t=1,\ h( t) =1\\
+			linear:\ \\
+			y( t) =\int _{-\infty }^{2t} x_{1}( t) +x_{2}( t) dt=\int _{-\infty }^{2t} x_{1}( t) dt+\int _{-\infty }^{2t} x_{2}( t) dt\\
+			linear\ because\ integral\ is\ separable\\
+			also\ integral\ can\ carry\ contant\ out\ \\
+			\\
+			Time\ variant:\ \\
+			y( t) =\int _{-\infty }^{2t} x( t-k) dt\neq \int _{-\infty }^{2( t-k)} x( t-k) dt
+	\end{gathered}
+\end{equation}
+\hrule
+\begin{equation}
+	\begin{gathered}
+			y( t) =x( t/3)\\
+			h( t) =\delta ( t/3)\\
+			stable:\ \int \delta ( t/3) dt=1\\
+			causal:\ t< 0,\ h( t) =0\\
+			memoryless:h( t) =0\ except\ t=0\\
+			linear\ since\ any\ linear\ signal\ with\ scaling\ remains\ linear\\
+			time\ invariant\ since\ linear\ system\ x( t) \ is\ only\ scaled
+	\end{gathered}
+\end{equation}
+\hrule
+\begin{equation}
+	\begin{gathered}
+			y( t) =\begin{cases}
+				x( t) +x( t-2) & t\geqslant 0\\
+				o & ow
+			\end{cases}\\
+			h( t) =\ \begin{cases}
+				\delta ( t) +\delta ( t-2) & t\geqslant 0\\
+				0 & ow
+			\end{cases}\\
+			stable:\ \int \delta ( t) +\delta ( t-2) dt< \infty \\
+			causal:\ t< 0,\ h( t) =0\\
+			not\ memoryless:\ h( 2) \neq 0\\
+			linear:\ \\
+			\begin{cases}
+				x_{1}( t) +x_{1}( t-2) +x_{2}( t) +x_{2}( t-2) & t\geqslant 0\\
+				0 & ow
+			\end{cases} =\\
+			\begin{cases}
+				x_{1}( t) +x_{1}( t-2) & t\geqslant 0\\
+				o & ow
+			\end{cases} +\begin{cases}
+				x_{2}( t) +x_{2}( t-2) & t\geqslant 0\\
+				o & ow
+			\end{cases}\\
+			it\ is\ the\ same\ if\ we\ scale\ it\ with\ some\ variable\ or\ give\ it\ the\ system\ of\ \\
+			ax( t) .\ \\
+			\\
+			time\ variant:\\
+			\begin{cases}
+				x( t-k) +x( t-k-2) & t\geqslant k\\
+				0 & ow
+			\end{cases} \neq \begin{cases}
+				x( t-k) +x( t-k-2) & t\geqslant 0\\
+				0 & ow
+			\end{cases}
+	\end{gathered}
+\end{equation}
+\hrule
+\begin{equation}
+	\begin{gathered}
+			y( t) =\begin{cases}
+				x( t) +x( t-2) & x( t) \geqslant 0\\
+				o & ow
+			\end{cases}\\
+			h( t) =\ \begin{cases}
+				\delta ( t) +\delta ( t-2) & \\
+				0 & 
+			\end{cases}\\
+			stable:\ \int \delta ( t) +\delta ( t-2) dt< \infty \\
+			causal:\ t< 0,\ h( t) =0\\
+			not\ memoryless:\ h( 2) \neq 0\\
+			not\ linear:\\
+			\begin{cases}
+				x_{1}( t) +x_{1}( t-2) +x_{2}( t) +x_{2}( t-2) & x_{1}( t) +x_{2}( t) \geqslant 0\\
+				o & ow
+			\end{cases} \neq \\
+			\begin{cases}
+				x_{1}( t) +x_{1}( t-2) & x_{1}( t) \geqslant 0\\
+				o & ow
+			\end{cases} +\begin{cases}
+				x_{2}( t) +x_{2}( t-2) & x_{2}( t) \geqslant 0\\
+				o & ow
+			\end{cases}\\
+			\\
+			time\ invariant:\\
+			\begin{cases}
+				x( t-k) +x( t-k-2) & x( t-k) \geqslant 0\\
+				o & ow
+			\end{cases} =\begin{cases}
+				x( t-k) +x( t-k-2) & x( t-k) \geqslant 0\\
+				o & ow
+			\end{cases}
+	\end{gathered}
+\end{equation}
+
+\section{سوال ۵}
+
+\begin{equation}
+	\begin{gathered}
+			R_{x}( \omega ) =\int _{-\infty }^{+\infty } \delta ( w-w_{0}) +\delta ( w+w_{0}) e^{2j\pi \omega \tau } dw=e^{-2j\pi \omega _{0} \tau } +e^{2j\pi \omega _{0} \tau }\\
+			R_{x}( \omega ) =\int _{-\infty }^{+\infty } e^{\frac{-\omega ^{2}}{2}} e^{2j\pi \omega \tau } dw=\sqrt{2\pi } \ e^{2j^{2} \pi ^{2} \tau ^{2}}\\
+			R_{x}( w) =\int _{-\infty }^{+\infty } e^{-|\omega |} e^{2j\pi \omega \tau } dw\\
+			=\int _{0}^{+\infty } e^{-\omega } e^{2j\pi \omega \tau } dw+\int _{-\infty }^{0} e^{\omega } e^{2j\pi \omega \tau } dw\\
+			=\left[\frac{1}{2j\pi \tau -1} e^{w( 2j\pi \tau -1)}\right]_{0}^{\infty } +\left[\frac{1}{2j\pi \tau +1} e^{w( 2j\pi \tau +1)}\right]_{-\infty }^{0}\\
+			=\frac{-1}{2j\pi \tau -1} +\frac{1}{2j\pi \tau +1}
+	\end{gathered}
+\end{equation}
+
 
  \end{document}
