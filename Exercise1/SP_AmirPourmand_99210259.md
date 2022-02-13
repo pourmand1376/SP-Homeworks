@@ -1,0 +1,393 @@
+::: center
+** تمرین اول **\
+**درس فرآیند تصادفی**
+
+**نام و نام خانوادگی: امیر پورمند**
+
+**شماره دانشجویی: 99210259**
+
+آدرس ایمیل :
+:::
+
+# سوال ۱
+
+## الف
+
+زمان ارسال ایمیل برای علی تابع متغیر تصادفی $X$ خواهد بود که از توزیع
+پواسون با پارامتر لاندا پیروی میکند.
+
+$$\begin{split}
+    X \sim Pois(\lambda_A) \\
+    P(X == 3) = \frac{\lambda^k e^{-\lambda}}{k!} = 
+    \frac{\lambda_A^3 e^{-\lambda_A}}{3!}    
+    \end{split}$$
+
+## ب
+
+### الف
+
+$$\begin{split}
+        f_{Y_{2} |Y_{1}}( y_{2} |y_{1}) =f_{X_{2}}( y_{2} -y_{1}) =\lambda e^{-\lambda ( y_{2} -y_{1})}\\
+        E[ Y_{2} |Y_{1}] =\int _{0}^{\infty } Y_{2} f_{Y_{2} |Y_{1}}( y_{2} |y_{1}) dy_{2} =\int _{0}^{\infty } Y_{2} \lambda e^{-\lambda ( y_{2} -y_{1})} dy_{2}\\
+        =\frac{e^{\lambda y_{1}}}{\lambda }
+\end{split}$$
+
+### ب
+
+میدانیم تابع چگانی $Y_1$ بصورت زیر است: $$Y_{1} =\begin{cases}
+        \lambda e^{-\lambda } & Y_{1} \geqslant 0\\
+        0 & Y_{1} < 0
+    \end{cases}$$ سپس داریم $$\begin{split}
+         \begin{array}{c}
+            X\ =\ Y_{1}^{2} \ \Longrightarrow \ Y_{1} \ =\ \sqrt{x}\\
+            f_{X}( x) \ =\ f_{Y_{1}}\left(\sqrt{x}\right)\frac{1}{2\sqrt{x}} \ =\lambda e^{-\lambda \sqrt{x}}\frac{1}{2\sqrt{x}} \ \ 
+        \end{array}
+    \end{split}$$
+
+### ج
+
+$$\begin{split}
+          \begin{array}{c}
+            f_{Y_{1} ,Y_{2}}( y_{1} ,y_{2}) =f_{Y_{2} |Y_{1}}( y_{2} |y_{1}) f_{Y_{1}}( y_{1})\\
+            =f_{X_{1}}( y_{2} -y_{1}) f_{Y_{1}}( y_{1}) =\lambda e^{-\lambda ( y_{2} -y_{1})} \lambda e^{-\lambda y_{1}} =\lambda ^{2} e^{-\lambda y_{2}}
+         \end{array}
+    \end{split}$$
+
+## ج
+
+### الف
+
+$$\begin{gathered}
+                E[ Y_{1} |Y_{1} \leqslant 1] =?\\
+                F_{Y_{1} |Y_{1} \leqslant 1}( y_{1}) =P( Y_{1} \leqslant y_{1} |Y_{1} \leqslant 1) =1-P( Y_{1} \geqslant y_{1} |Y_{1} \leqslant 1)\\
+                =1-\frac{P( y_{1} \leqslant Y_{1} \leqslant 1)}{P( Y_{1} \leqslant 1)} =1-\frac{e^{-\lambda y_{1}} e^{-\lambda ( 1-y_{1})} \lambda ( 1-y_{1})}{e^{-\lambda } \lambda }\\
+                =1-( 1-y_{1}) =y_{1}
+    \end{gathered}$$
+
+$$\begin{gathered}
+        E[ Y_{1} |Y_{1} \leqslant 1] =\int _{0}^{1}( 1-y_{1}) dy_{1} =\left[ y_{1} -y_{1}^{2} /2\right]_{0}^{1} =\frac{1}{2}
+    \end{gathered}$$
+
+### ب
+
+$$E[ Y_{2} |Y_{1} \leqslant 1] =E[ 1+X_{2}] =1+\frac{1}{\lambda }$$
+
+## د
+
+### الف
+
+خب فرض کنیم علی $A$ نامه میفرستد در حالی که محمد $M$ نامه میفرستد. و نرخ
+ارسال ایمیل های علی را $\lambda_1=2\lambda_A$ و نرخ ارسال ایمیل های محمد
+را $\lambda_2=\lambda_B$ در نظر میگیریم و توجه داریم که با توجه به این
+که زمان علی و محمد متفاوت است در واقع
+
+توزیع جمع نامه ها برابر خواهد بود با:
+
+$$\begin{aligned}
+        p_{Z}(z) &=P(Z=z) \\
+        &=\sum_{j=0}^{z} P(X=j \& Y=z-j) \quad \text { so } X+Y=z \\
+        &=\sum_{j=0}^{z} P(X=j) P(Y=z-j)  \\
+        &=\sum_{j=0}^{z} \frac{e^{-\lambda_{1}} \lambda_{1}^{j}}{j !} \frac{e^{-\lambda_{2}} \lambda_{2}^{z-j}}{(z-j) !} \\
+        &=\sum_{j=0}^{z} \frac{1}{j !(z-j) !} e^{-\lambda_{1}} \lambda_{1}^{j} e^{-\lambda_{2}} \lambda_{2}^{z-j} \\
+        &=\sum_{j=0}^{z} \frac{z !}{j !(z-j) !} \frac{e^{-\lambda_{1}} \lambda_{1}^{j} e^{-\lambda_{2}} \lambda_{2}^{z-j}}{z !} \\
+        &=\sum_{j=0}^{z}\left(\begin{array}{l}
+            z \\
+            j
+        \end{array}\right) \frac{e^{-\lambda_{1}} \lambda_{1}^{j} e^{-\lambda_{2}} \lambda_{2}^{z-j}}{z !} \\
+        &=\frac{e^{-\lambda}}{z !} \sum_{j=0}^{z}\left(\begin{array}{l}
+            z \\
+            j
+        \end{array}\right) \lambda_{1}^{j} \lambda_{2}^{z-j} \\
+        &=\frac{e^{-\lambda}}{z !}\left(\lambda_{1}+\lambda_{2}\right)^{z}
+    \end{aligned}$$ حال توزیع نهایی برابر توزیع پواسون با پارامتر جمع
+این دو یعنی $\lambda_1+\lambda_2 = 2\lambda_A+\lambda_B$ خواهد بود.
+
+### ب
+
+$$\begin{gathered}
+            S_{0} =min( T_{0} ,1) \Longrightarrow \\
+            F_{S_{0}}( s_{0}) =P( min( T_{0} ,1) < s_{0})\\
+            =1-P( min( T_{0} ,1)  >s_{0}) =1-P( s_{0} < T_{0} ,\ s_{0} < 1)\\
+            =1-P( s_{0} < T_{0}) P( s_{0} < 1) =1-II( s_{0} < 1)( 1-F_{T_{0}}( s_{0}))\\
+            =1-\left( 1-\left( 1-e^{-\lambda s_{0}}\right)\right) =1-e^{-\lambda s_{0}}\\
+            E[ S_{0}] =\int _{0}^{1} e^{-\lambda s_{0}} ds_{0} =\frac{-1}{\lambda }\left[ e^{-\lambda s_{0}}\right]_{0}^{1} =\frac{-1}{\lambda }\left( e^{-\lambda } -1\right) =\frac{1-e^{-\lambda }}{\lambda }\\
+            E[ Q] =E[ S_{0}] +E[ T_{1}] =E[ min( T_{0} ,1)] +E[ exp( \lambda _{A})] =\frac{1}{\lambda_A } +\frac{1-e^{-\lambda_A }}{\lambda_A }
+    \end{gathered}$$
+
+### ج
+
+$$\begin{gathered}
+            P( A=4|A+B=10) =P( A=4,B=6|A+B=10)\\
+            =\frac{P( A=4) P( B=6)}{F_{A+B}( 10)} =\frac{e^{-2\lambda _{A}}( 2\lambda _{A})^{4}}{4!} \times \frac{e^{-\lambda _{B}} \lambda _{B}^{6}}{6!} \times \frac{10!}{e^{-2\lambda _{A} -\lambda _{B}}( 2\lambda _{A} +\lambda _{B})^{10}}\\
+            =\frac{10*9*8*7}{4*3*2} \times \frac{2^{4} \lambda _{A}^{4} \lambda _{B}^{6}}{( 2\lambda _{A} +\lambda _{B})^{10}}\\
+            =\frac{10*3*7*16*\lambda _{A}^{4} \lambda _{B}^{6}}{( 2\lambda _{A} +\lambda _{B})^{10}}
+    \end{gathered}$$
+
+## ه
+
+$$\begin{gathered}
+                Chebyshev\ \\
+                X\ \sim \ Pois( 4)\\
+                E[ X] =4,\ Var( X) =4,\ \sigma ( X) =2\\
+                P( |X-\mu |\geqslant k\sigma ) \leqslant \frac{1}{k^{2}}\\
+                P( X\geqslant 5)\rightarrow P( X-4\geqslant 1)\\
+                k\sigma =2k\leqslant 1\rightarrow k\leqslant \frac{1}{2}\rightarrow \frac{1}{k^{2}} \geqslant 4\ \rightarrow useless
+    \end{gathered}$$
+
+$$\begin{gathered}
+            Markov\\
+            X\sim Pois( 4)\\
+            E[ X] =4\\
+            P( X\geqslant a) \leqslant \frac{E[ X]}{a}\\
+            P( X\geqslant 5) \leqslant \frac{4}{5} =0.8\ \rightarrow more\ useful
+    \end{gathered}$$
+
+## و
+
+برای این مسئله باید ابتدا قضیه CLT را بیان کنم که میگوید اگر یک سری
+متغیر iid داشته باشیم توزیع میانگین این متغیرها همواره یک توزیع نرمال
+است. به طور دقیق تر برای این مثال وقتی $\lambda$ به اندازه کافی بزرگ
+باشد یعنی به اندازه $\lambda$ متغیرتصادفی داریم که هر کدام توزیع پواسون
+با پارامتر یک دارند و البته واریانس آنها نیز یک است. در اینجا جمع این
+متغیرهای پواسون همواره یک توزیع نرمال خواهد بود و برای تخمین میتوان از
+ان استفاده کرد. حال میتوان به جای حساب کردن توزیع پواسون در بازه صفر تا
+یک از توزیع نرمال با پارامتر لاندا به عنوان میانگین و البته واریانس
+لاندا برای این منظور استفاده کرد. $N \sim N(\lambda,\lambda)$
+
+## ز
+
+$$\begin{aligned}
+    \begin{gathered}
+                \Lambda \sim Exp( 2)\\
+                N|\Lambda \sim Pois( \lambda )\\
+                P( N=n) =\int _{0}^{\infty } P( N=n|\Lambda =\lambda ) P( \Lambda =\lambda ) d\lambda \\
+                =\int _{0}^{\infty }\frac{e^{-\lambda } \lambda ^{n}}{n!} \times 2e^{-2\lambda } d\lambda \\
+                we\ know\ that\ \int _{0}^{\infty }\frac{e^{-x} x^{n}}{n!} dx=1\\
+                =\frac{2}{3*3^{n}}\int _{0}^{\infty }\frac{e^{-3\lambda } 3^{n} \lambda ^{n}}{n!} d\lambda =\frac{2}{3^{n+1}}\\
+                E\left[ N^{2}\right] =\int _{0}^{\infty } n^{2}\frac{2}{3^{n+1}} dn=\frac{4}{3ln^{3}( 3)}
+    \end{gathered}\end{aligned}$$
+
+# سوال ۲
+
+## الف
+
+$$\begin{gathered}
+            x( t) \ *\ h( t) =\int _{-\infty }^{+\infty } x( \tau ) h( t-\tau ) d\tau =\int _{-\infty }^{+\infty } e^{-a\tau } u( \tau ) e^{-b( t-\tau )} u( t-\tau ) d\tau \\
+            =\int _{0}^{t} e^{-a\tau -bt+b\tau } d\tau =e^{-bt}\frac{1}{b-a}\left[ e^{( b-a) \tau }\right]_{0}^{t} =\frac{e^{-bt}}{b-a}\left[ e^{bt-at} -1\right] ,\ t >0
+    \end{gathered}$$
+
+## ب
+
+$$\begin{gathered}
+            x( t) \ *\ h( t) =\int _{-\infty }^{+\infty } x( \tau ) h( t-\tau ) d\tau =\int _{-\infty }^{+\infty } e^{-a\tau } u( \tau ) u( t-\tau ) d\tau \\
+            =\int _{0}^{t} e^{-a\tau } d\tau =\frac{-1}{a}\left[ e^{-a\tau }\right]_{0}^{t} =\frac{e^{-at} -1}{-a} ,\ t >0
+    \end{gathered}$$
+
+## ج
+
+$$\begin{gathered}
+            x( t) \ *\ h( t) =\int _{-\infty }^{+\infty } x( \tau ) h( t-\tau ) d\tau =\int _{-\infty }^{+\infty } u( \tau ) u( t-\tau ) d\tau \\
+            =\int _{0}^{t} d\tau =t,t >0
+    \end{gathered}$$
+
+# سوال ۳
+
+$$\begin{gathered}
+        h( n) =\left(\frac{1}{5}\right)^{n} u[ n] ,\ \begin{cases}
+            causal & n< 0\Longrightarrow h[ n] =0\\
+            stable & \sum _{k=-\infty }^{+\infty } |h[ n] |=1+\frac{1}{5} +\frac{1}{25} +...\ =\ \frac{1}{1-\frac{1}{5}} =\frac{5}{4} < \infty 
+        \end{cases}
+    \end{gathered}$$
+
+$$\begin{gathered}
+        h( n) =0.8^{n} u( n+2) ,\begin{cases}
+            noncausal & n=1,\ h[ n] \neq 0\\
+            stable & 0.8^{-2} +0.8^{-1} +...=\frac{0.8^{-2}}{1-0.8} < \infty 
+        \end{cases}
+    \end{gathered}$$
+
+$$\begin{gathered}
+        h( n) =\left(\frac{1}{2}\right)^{n} u( -n) ,\begin{cases}
+            noncausal & u< 0,h[ n]  >0\\
+            not\ stable & 0.5^{0} +0.5^{-1} +...\ =\ \infty 
+        \end{cases}
+    \end{gathered}$$
+
+$$\begin{gathered}
+        h( n) =5^{n} u( 3-n) ,\begin{cases}
+            noncausal & n=-1,h( n) \neq 0\\
+            stable & 5^{3} +5^{2} +...\ =\frac{5^{3}}{1-\frac{1}{5}}
+        \end{cases} < \infty 
+    \end{gathered}$$
+
+$$\begin{gathered}
+        h( t) =e^{-4t} u( t-2) ,\begin{cases}
+            casual & t< 0,h( t) =0\\
+            stable & \int _{2}^{\infty } e^{-4t} dt=\frac{-1}{4}\left[ e^{-4t}\right]_{2}^{\infty } < \infty 
+        \end{cases}
+    \end{gathered}$$
+
+$$\begin{gathered}
+        h( t) =e^{-6t} u( 3-t) ,\begin{cases}
+            noncausal & t=-1,h( t) \neq 0\\
+            nonstable & \int _{-\infty }^{3} e^{-6t} dt=\infty 
+        \end{cases}
+    \end{gathered}$$
+
+$$\begin{gathered}
+        h( t) =e^{-2t} u( t+50) ,\begin{cases}
+            noncausal & t=-1,h( t) \neq 0\\
+            stable & \int _{-50}^{\infty } e^{-2t} dt=\frac{-1}{2}\left[ e^{-2t}\right]_{-50}^{\infty } < \infty 
+        \end{cases}
+    \end{gathered}$$
+
+# سوال ۴
+
+$$\begin{gathered}
+            y( t) =x( t-2) +x( 2-t)\\
+            h( t) =\delta ( t-2) +\delta ( 2-t)\\
+            stable:\ \int _{-\infty }^{+\infty } \delta ( t-2) +\delta ( 2-t) dt=2\\
+            casual:\ t< 0,h( t) =0\\
+            not\ memoryless:\ h( 2) =2\neq 0\\
+            Linear:\ \\
+            y( t) =x_{1}( t-2) +x_{1}( 2-t) +x_{1}( t-2) +x_{1}( 2-t)\\
+            y_{1}( t) =x_{1}( t-2) +x_{1}( 2-t)\\
+            y_{2}( t) =x_{1}( t-2) +x_{1}( 2-t)\\
+            \\
+            y( t) =ax( t-2) +ax( 2-t) =ax( t-2) +x( 2-t) =ay_{a}( t)\\
+            we\ could\ also\ easily\ say\ that\ sum\ of\ two\ linear\ systems\ is\ linear!\\
+            \\
+            Time\ invariant:\ y( t-k) =x( t-k-2) +x( 2-t+k)\\
+            S[ x( t-k)] =x( t-k-2) +x( 2-t+k) \ \rightarrow both\ equal
+    \end{gathered}$$
+
+------------------------------------------------------------------------
+
+$$\begin{gathered}
+            y( t) =cos( 3t) x( t)\\
+            h( t) =cost( 3t) \delta ( t)\\
+            stable:\ \int cos( 3t) \delta ( t) dt=1\\
+            memoryless:\ h( t) =0\ execpt\ t=0\\
+            casual:h( t) =0,t< 0\\
+            linear:\ cos( 3t) \ is\ constant( not\ dependant\ on\ x( t)) \ everytime\ and\ product\ of\ constant\ signal\ \\
+            to\ a\ linear\ signal\ is\ definitely\ linear.\ \\
+            \\
+            Time\ variant:\ \\
+            y( t-k) =cos( 3t-3k) x( t-k) \neq cos( 3t) x( t-k)
+    \end{gathered}$$
+
+------------------------------------------------------------------------
+
+$$\begin{gathered}
+            y( t) =\int _{-\infty }^{2t} x( t) dt\\
+            h( t) \ =\ u( t)\\
+            not\ stable:\ \int u( t) =\infty \\
+            causal:\ t< 0\rightarrow h( t) =0\\
+            not\ memoryless:\ t=1,\ h( t) =1\\
+            linear:\ \\
+            y( t) =\int _{-\infty }^{2t} x_{1}( t) +x_{2}( t) dt=\int _{-\infty }^{2t} x_{1}( t) dt+\int _{-\infty }^{2t} x_{2}( t) dt\\
+            linear\ because\ integral\ is\ separable\\
+            also\ integral\ can\ carry\ contant\ out\ \\
+            \\
+            Time\ variant:\ \\
+            y( t) =\int _{-\infty }^{2t} x( t-k) dt\neq \int _{-\infty }^{2( t-k)} x( t-k) dt
+    \end{gathered}$$
+
+------------------------------------------------------------------------
+
+$$\begin{gathered}
+            y( t) =x( t/3)\\
+            h( t) =\delta ( t/3)\\
+            stable:\ \int \delta ( t/3) dt=1\\
+            causal:\ t< 0,\ h( t) =0\\
+            memoryless:h( t) =0\ except\ t=0\\
+            linear\ since\ any\ linear\ signal\ with\ scaling\ remains\ linear\\
+            time\ invariant\ since\ linear\ system\ x( t) \ is\ only\ scaled
+    \end{gathered}$$
+
+------------------------------------------------------------------------
+
+$$\begin{gathered}
+            y( t) =\begin{cases}
+                x( t) +x( t-2) & t\geqslant 0\\
+                o & ow
+            \end{cases}\\
+            h( t) =\ \begin{cases}
+                \delta ( t) +\delta ( t-2) & t\geqslant 0\\
+                0 & ow
+            \end{cases}\\
+            stable:\ \int \delta ( t) +\delta ( t-2) dt< \infty \\
+            causal:\ t< 0,\ h( t) =0\\
+            not\ memoryless:\ h( 2) \neq 0\\
+            linear:\ \\
+            \begin{cases}
+                x_{1}( t) +x_{1}( t-2) +x_{2}( t) +x_{2}( t-2) & t\geqslant 0\\
+                0 & ow
+            \end{cases} =\\
+            \begin{cases}
+                x_{1}( t) +x_{1}( t-2) & t\geqslant 0\\
+                o & ow
+            \end{cases} +\begin{cases}
+                x_{2}( t) +x_{2}( t-2) & t\geqslant 0\\
+                o & ow
+            \end{cases}\\
+            it\ is\ the\ same\ if\ we\ scale\ it\ with\ some\ variable\ or\ give\ it\ the\ system\ of\ \\
+            ax( t) .\ \\
+            \\
+            time\ variant:\\
+            \begin{cases}
+                x( t-k) +x( t-k-2) & t\geqslant k\\
+                0 & ow
+            \end{cases} \neq \begin{cases}
+                x( t-k) +x( t-k-2) & t\geqslant 0\\
+                0 & ow
+            \end{cases}
+    \end{gathered}$$
+
+------------------------------------------------------------------------
+
+$$\begin{gathered}
+            y( t) =\begin{cases}
+                x( t) +x( t-2) & x( t) \geqslant 0\\
+                o & ow
+            \end{cases}\\
+            h( t) =\ \begin{cases}
+                \delta ( t) +\delta ( t-2) & \\
+                0 & 
+            \end{cases}\\
+            stable:\ \int \delta ( t) +\delta ( t-2) dt< \infty \\
+            causal:\ t< 0,\ h( t) =0\\
+            not\ memoryless:\ h( 2) \neq 0\\
+            not\ linear:\\
+            \begin{cases}
+                x_{1}( t) +x_{1}( t-2) +x_{2}( t) +x_{2}( t-2) & x_{1}( t) +x_{2}( t) \geqslant 0\\
+                o & ow
+            \end{cases} \neq \\
+            \begin{cases}
+                x_{1}( t) +x_{1}( t-2) & x_{1}( t) \geqslant 0\\
+                o & ow
+            \end{cases} +\begin{cases}
+                x_{2}( t) +x_{2}( t-2) & x_{2}( t) \geqslant 0\\
+                o & ow
+            \end{cases}\\
+            \\
+            time\ invariant:\\
+            \begin{cases}
+                x( t-k) +x( t-k-2) & x( t-k) \geqslant 0\\
+                o & ow
+            \end{cases} =\begin{cases}
+                x( t-k) +x( t-k-2) & x( t-k) \geqslant 0\\
+                o & ow
+            \end{cases}
+    \end{gathered}$$
+
+# سوال ۵
+
+$$\begin{gathered}
+            R_{x}( \omega ) =\int _{-\infty }^{+\infty } \delta ( w-w_{0}) +\delta ( w+w_{0}) e^{2j\pi \omega \tau } dw=e^{-2j\pi \omega _{0} \tau } +e^{2j\pi \omega _{0} \tau }\\
+            R_{x}( \omega ) =\int _{-\infty }^{+\infty } e^{\frac{-\omega ^{2}}{2}} e^{2j\pi \omega \tau } dw=\sqrt{2\pi } \ e^{2j^{2} \pi ^{2} \tau ^{2}}\\
+            R_{x}( w) =\int _{-\infty }^{+\infty } e^{-|\omega |} e^{2j\pi \omega \tau } dw\\
+            =\int _{0}^{+\infty } e^{-\omega } e^{2j\pi \omega \tau } dw+\int _{-\infty }^{0} e^{\omega } e^{2j\pi \omega \tau } dw\\
+            =\left[\frac{1}{2j\pi \tau -1} e^{w( 2j\pi \tau -1)}\right]_{0}^{\infty } +\left[\frac{1}{2j\pi \tau +1} e^{w( 2j\pi \tau +1)}\right]_{-\infty }^{0}\\
+            =\frac{-1}{2j\pi \tau -1} +\frac{1}{2j\pi \tau +1}
+    \end{gathered}$$
