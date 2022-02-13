@@ -1,0 +1,1 @@
+The focus of this exercise is to generate poisson process and gaussian process from scratch to get a feel of how they are working. 
