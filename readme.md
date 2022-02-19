@@ -20,7 +20,7 @@ Hidden Markov Model [[Project Definition]](Final%20Project/پروژه_ی%20پا�
 
 My Report [[html]](Final%20Project/Report_final_project_Stoch.html) [[pdf]](Final%20Project/Report_final_project_Stoch.pdf)
 
-My Solution [[html]](Final%20Project/FinalStoch.html) [[pdf]](Final%20Project/FinalStoch.pdf) [[markdown]](Final%20Project/FinalStoch.md) [[ipynb]](Final%20Project/FinalStoch.ipynb)
+My Solution [[markdown]](Final%20Project/FinalStoch.md) [[html]](Final%20Project/FinalStoch.html) [[pdf]](Final%20Project/FinalStoch.pdf)  [[ipynb]](Final%20Project/FinalStoch.ipynb)
 
 # 3- Exams
 
