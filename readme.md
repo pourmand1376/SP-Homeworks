@@ -1,3 +1,32 @@
+# Syllabus [pdf](Syllabus_SP_Fall_2021_v3.pdf)
+
+All slides are in `slides` folder. 
+
+# Projects
+
+## Practical1
+### Poisson Process [[Markdown]](SP_PracticalHW1_Fall2021/AmirPourmand_Poisson%20Process_99210259.md) [[pdf]](SP_PracticalHW1_Fall2021/AmirPourmand_Poisson%20Process_99210259.pdf) [[html]](SP_PracticalHW1_Fall2021/AmirPourmand_Poisson%20Process_99210259.html) [[ipynb]](SP_PracticalHW1_Fall2021/AmirPourmand_Poisson%20Process_99210259.ipynb)
+
+### Gaussian Process [[Markdown]](SP_PracticalHW1_Fall2021/Gaussian%20Process_AmirPourmand_99210259.md) [[html]](SP_PracticalHW1_Fall2021/Gaussian%20Process_AmirPourmand_99210259.html) [[ipynb]](SP_PracticalHW1_Fall2021/Gaussian%20Process_AmirPourmand_99210259.ipynb)
+
+## Practical2
+
+### MLE, MAP, Hypothesis Testing [[Markdown]](SP_PracticalHW2_Fall2021/SP_PHW2_Code_AmirPourmand_99210259.md) [[html]](SP_PracticalHW2_Fall2021/SP_PHW2_Code_AmirPourmand_99210259.html) [[ipynb]](SP_PracticalHW2_Fall2021/SP_PHW2_Code_AmirPourmand_99210259.ipynb) [[pdf]](SP_PracticalHW2_Fall2021/SP_PHW2_Code_AmirPourmand_99210259.pdf) [[Equations]](SP_PracticalHW2_Fall2021/HW_Practical2_AmirPourmand.pdf)
+
+## Final Project
+
+### Hidden Markov Model [[Project Definition]](Final%20Project/پروژه_ی%20پایانی.pdf) 
+### My Report [[html]](Final%20Project/Report_final_project_Stoch.html) [[pdf]](Final%20Project/Report_final_project_Stoch.pdf)
+### My Solution [[html]](Final%20Project/FinalStoch.html) [[pdf]](Final%20Project/FinalStoch.pdf) [[markdown]](Final%20Project/FinalStoch.md) [[ipynb]](Final%20Project/FinalStoch.ipynb)
+
+
+# Exams
+
+### MidTerm [[Questions]](Midterm/میانترم%20(2).pdf) [[Solutions]](Midterm/SP_Midterm_Solutions_Fall2021.pdf) [[MyAnswers]](Midterm/MidTerm_Me.pdf)
+
+### Final [[Questions]](Final/پایانترم%20(2).pdf) [[Solutions]](Final/SP_Final_Solutions_Fall2021.pdf) [[MyAnswers]](Final/final.pdf)
+
+
 
 # Exercises
 
@@ -35,33 +64,3 @@
 
 ### Quiz9 [[Questions]](Quizzes/کوییز%20۹%20(1).pdf) [[Solutions]](Quizzes/Solutions/SP_Quiz9_Solutions_Fall2021.pdf) [[MyAnswer]](Quizzes/Quiz9.pdf)
 
-# Exams
-
-### MidTerm [[Questions]](Midterm/میانترم%20(2).pdf) [[Solutions]](Midterm/SP_Midterm_Solutions_Fall2021.pdf) [[MyAnswers]](Midterm/MidTerm_Me.pdf)
-
-### Final [[Questions]](Final/پایانترم%20(2).pdf) [[Solutions]](Final/SP_Final_Solutions_Fall2021.pdf) [[MyAnswers]](Final/final.pdf)
-
-# Projects
-
-## Practical1
-### Poisson Process [[Markdown]](SP_PracticalHW1_Fall2021/AmirPourmand_Poisson%20Process_99210259.md) [[pdf]](SP_PracticalHW1_Fall2021/AmirPourmand_Poisson%20Process_99210259.pdf) [[html]](SP_PracticalHW1_Fall2021/AmirPourmand_Poisson%20Process_99210259.html) [[ipynb]](SP_PracticalHW1_Fall2021/AmirPourmand_Poisson%20Process_99210259.ipynb)
-
-### Gaussian Process [[Markdown]](SP_PracticalHW1_Fall2021/Gaussian%20Process_AmirPourmand_99210259.md) [[html]](SP_PracticalHW1_Fall2021/Gaussian%20Process_AmirPourmand_99210259.html) [[ipynb]](SP_PracticalHW1_Fall2021/Gaussian%20Process_AmirPourmand_99210259.ipynb)
-
-## Practical2
-
-### MLE, MAP, Hypothesis Testing [[Markdown]](SP_PracticalHW2_Fall2021/SP_PHW2_Code_AmirPourmand_99210259.md) [[html]](SP_PracticalHW2_Fall2021/SP_PHW2_Code_AmirPourmand_99210259.html) [[ipynb]](SP_PracticalHW2_Fall2021/SP_PHW2_Code_AmirPourmand_99210259.ipynb) [[pdf]](SP_PracticalHW2_Fall2021/SP_PHW2_Code_AmirPourmand_99210259.pdf) [[Equations]](SP_PracticalHW2_Fall2021/HW_Practical2_AmirPourmand.pdf)
-
-
-## Final Project
-
-### Hidden Markov Model [[Project Definition]](Final%20Project/پروژه_ی%20پایانی.pdf) 
-
-This is about implementation of hidden markov models and its algorithms, namely, `baum-weltch`, `viterbi`, `metropolis-hastings`.
-### My Report [[html]](Final%20Project/Report_final_project_Stoch.html) [[pdf]](Final%20Project/Report_final_project_Stoch.pdf)
-
-### My Solution [[html]](Final%20Project/FinalStoch.html) [[pdf]](Final%20Project/FinalStoch.pdf) [[markdown]](Final%20Project/FinalStoch.md) [[ipynb]](Final%20Project/FinalStoch.ipynb)
-
-# Slides
-
-All slides are in `slides` folder. 
